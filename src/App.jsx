@@ -1,14 +1,16 @@
 import * as React from 'react';
 import NavBar from './components/navBar';
+
 import { AuthProvider } from './context/AuthContext';
+import { PrimeReactProvider } from "primereact/api";
+import "primereact/resources/themes/lara-light-indigo/theme.css";
 
-export const App = () => {
+export default function App() {
   return (
-    <>
     <AuthProvider>
-    <NavBar/>
+    <PrimeReactProvider>
+        <NavBar />
+    </PrimeReactProvider>
     </AuthProvider>
-    </>
-  )};
-
-export default App
+  );
+}
